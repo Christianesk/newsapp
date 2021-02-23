@@ -10,6 +10,7 @@
 .svn/
 /ios
 /android
+config
 
 # IntelliJ related
 *.iml
