@@ -8,9 +8,11 @@ class Tab1Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final headlines = Provider.of<NewsService>(context).headlines;
-
+  //
     return Scaffold(
-      body: NewsList(headlines),
+      body: (headlines.length == 0)
+      ? Center(child: CircularProgressIndicator())
+      :NewsList(headlines)
     );
   }
 }
